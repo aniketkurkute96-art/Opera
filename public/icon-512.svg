@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" fill="#0b2e26"/>
+  <path d="M120 360 L180 180 L240 280 L300 140 L360 280 L420 180 L420 360 Z" stroke="#c4a574" stroke-width="3" fill="rgba(196,165,116,0.08)"/>
+  <circle cx="300" cy="140" r="6" fill="#c4a574"/>
+  <text x="256" y="430" text-anchor="middle" fill="#f7f3ec" font-family="Georgia, serif" font-size="42" letter-spacing="8">OPERA</text>
+</svg>
