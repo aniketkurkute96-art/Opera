@@ -1,163 +1,135 @@
 /**
- * Curated editorial imagery — architectural atmosphere over product shots.
- * Replace with project renders when available.
+ * Curated luxury amenity & lifestyle imagery.
+ * All Unsplash IDs verified (HTTP 200) — invalid IDs cause Next.js upstream 404s.
+ * Replace with Opera-specific renders and photography when available.
  */
 import operaHero from "@/Img/opera-nagrik-hero.png";
+
+const u = (id: string, w = 1800) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=85`;
 
 export const images = {
   hero: {
     src: operaHero,
-    alt: "Opera by Nagrik — ultra luxury residences in Majiwada, Thane",
+    alt: "Opera by Nagrik — landmark residences with signature crown, Majiwada Thane",
   },
   purpose: {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80",
-    alt: "Quiet luxury interior with natural light",
+    src: u("1600210492486-724fe5c67fb0"),
+    alt: "Warm luxury living — natural light and refined comfort",
   },
   time: {
-    src: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=80",
-    alt: "Quiet sunrise — a slow morning before the city asks anything",
+    src: u("1414235077428-338989a2e8c0"),
+    alt: "Private dining — evenings returned to hospitality and conversation",
   },
   energy: {
-    src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80",
-    alt: "Light and air through trees — architecture breathing with nature",
+    src: u("1571902943202-507ec2618e8f"),
+    alt: "World-class wellness pool — restoration after the day",
   },
   value: {
-    src: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=80",
-    alt: "A skyline at dusk — landmark identity that endures",
+    src: operaHero,
+    alt: "Opera landmark silhouette — an address built to endure",
   },
   thane: {
-    src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=2000&q=80",
-    alt: "Urban corridor with infrastructure and skyline",
+    src: u("1514565131-fce0801e5785", 2000),
+    alt: "Thane skyline at night — connected, compounding, alive",
   },
   crown: {
-    src: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=2200&q=80",
-    alt: "Signature tower crown against open sky",
+    src: operaHero,
+    alt: "Opera Living Crown — signature skyline identity across Thane",
   },
   architecture: [
     {
-      src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1600&q=80",
-      alt: "Architectural facade with refined geometry",
-      caption: "Form",
+      src: u("1600210492486-724fe5c67fb0", 1600),
+      alt: "Living room positioned for morning light without sacrificing privacy",
+      caption: "Light",
     },
     {
-      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80",
-      alt: "Material detail in stone and bronze tones",
+      src: u("1600566753190-17f0baa2a6c3", 1400),
+      alt: "Stone, bronze, and timber — materials felt at close range",
       caption: "Material",
     },
     {
-      src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
-      alt: "Generous living volume with soft daylight",
-      caption: "Volume",
+      src: u("1600607687644-c7171b42498f", 1600),
+      alt: "Facade presence — architecture experienced on arrival",
+      caption: "Presence",
     },
     {
-      src: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1400&q=80",
-      alt: "Landscape meeting architecture",
+      src: u("1600585154340-be6161a56a0c", 1400),
+      alt: "Landscape courts and pool — green woven into daily life",
       caption: "Landscape",
     },
   ],
   arrival: [
     {
-      src: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=80",
-      alt: "Private gated arrival with landscaped approach at dusk",
+      src: u("1613977257363-707ba9348227", 1600),
+      alt: "Grand gated arrival — first impression of Opera",
       label: "Gate",
     },
     {
-      src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
-      alt: "Tree-lined driveway toward residence",
-      label: "Driveway",
+      src: u("1600596542815-ffad4c1539a9", 1600),
+      alt: "Tree-lined approach — unhurried procession home",
+      label: "Approach",
     },
     {
-      src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80",
-      alt: "Grand lobby with calm material palette",
+      src: u("1600607687920-4e2a09cf159d", 1600),
+      alt: "Double-height lobby — volume, warmth, and welcome",
       label: "Lobby",
     },
     {
-      src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80",
-      alt: "Discreet concierge setting",
-      label: "Concierge",
+      src: u("1600585154526-990dced4db0d", 1600),
+      alt: "Private threshold — lift lobby to residence entrance",
+      label: "Private Lift",
     },
   ],
   residences: {
     "3bhk": {
-      src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1800&q=80",
-      alt: "Refined three-bedroom living space",
+      src: u("1600210491892-03d54c0aaf87"),
+      alt: "Three-bedroom residence — warm light and everyday ease",
     },
     "4bhk": {
-      src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1800&q=80",
-      alt: "Expansive four-bedroom residence",
+      src: u("1600585154526-990dced4db0d"),
+      alt: "Four-bedroom estate — living room designed for hosting",
     },
     "6bhk": {
-      src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80",
-      alt: "Signature six-bedroom residence interior",
+      src: u("1600607687939-ce8a6c25118c"),
+      alt: "Signature six-bedroom — statement scale and presence",
     },
   },
-  amenities: [
-    {
-      src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=80",
-      alt: "Quiet spa pool in low, warm light",
-      caption: "Wellness",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=1400&q=80",
-      alt: "Elevated lounge overlooking the city",
-      caption: "Sky Lounge",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
-      alt: "Private dining atmosphere",
-      caption: "Private Dining",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
-      alt: "Landscaped residential court",
-      caption: "Landscape Courts",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1400&q=80",
-      alt: "Pool deck with horizon view",
-      caption: "Pool Deck",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
-      alt: "Quiet work atelier",
-      caption: "Work Atelier",
-    },
-  ],
   indulgences: [
     {
       id: "begin-well",
-      src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1800&q=80",
-      alt: "Morning wellness — soft light and stillness",
+      src: u("1506126613408-eca07ce68773"),
+      alt: "Sunrise wellness — yoga and restoration before the city wakes",
     },
     {
       id: "reflect",
-      src: "https://plus.unsplash.com/premium_photo-1697730326674-74b6c70509f4?auto=format&fit=crop&w=1800&q=80",
-      alt: "Birla Mandir, Jaipur — a sacred place for pause and reflection",
+      src: "https://plus.unsplash.com/premium_photo-1697730326674-74b6c70509f4?auto=format&fit=crop&w=1800&q=85",
+      alt: "Jain Derasar — sacred space for pause and tradition",
     },
     {
       id: "come-together",
-      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80",
-      alt: "Private dining and celebration",
+      src: u("1414235077428-338989a2e8c0"),
+      alt: "Private dining — hospitality, celebration, and conversation",
     },
     {
       id: "grow-together",
-      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80",
-      alt: "Family gardens and open green courts",
+      src: u("1600585154340-be6161a56a0c", 1800),
+      alt: "Family gardens and courts — room for every generation",
     },
     {
       id: "find-pace",
-      src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80",
-      alt: "Movement and everyday vitality",
+      src: u("1534438327276-14e5300c3a48"),
+      alt: "World-class fitness centre — movement woven into the day",
     },
     {
       id: "work-beautifully",
-      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80",
-      alt: "Business lounge and quiet focus",
+      src: u("1497366216548-37526070297c"),
+      alt: "Business lounge — focus in inspiring surroundings",
     },
     {
       id: "unwind",
-      src: "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?auto=format&fit=crop&w=1800&q=80",
-      alt: "Courtyard stillness and reflection",
+      src: u("1576013551627-0cc20b96c2a7"),
+      alt: "Infinity pool at golden hour — unwind above the city",
     },
     {
       id: "give-back",
@@ -167,28 +139,64 @@ export const images = {
   ],
   life: {
     morning: {
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1800&q=80",
-      alt: "Soft morning light over the city",
+      src: u("1600210492486-724fe5c67fb0"),
+      alt: "Morning light — the day begins in calm, refined surroundings",
     },
     afternoon: {
-      src: "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?auto=format&fit=crop&w=1800&q=80",
-      alt: "Afternoon calm in a green court",
+      src: u("1497366216548-37526070297c"),
+      alt: "Afternoon focus — quiet work in a home that protects concentration",
     },
     evening: {
-      src: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1800&q=80",
-      alt: "Golden evening skyline",
+      src: u("1600210491369-e753d80a41f3"),
+      alt: "Rooftop lounge at dusk — every evening above the city",
+    },
+    weekend: {
+      src: u("1414235077428-338989a2e8c0"),
+      alt: "Weekend hospitality — dining and celebration at home",
     },
     night: {
-      src: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1800&q=80",
-      alt: "City lights at night",
+      src: u("1616594039964-ae9021a400a0"),
+      alt: "Master suite at night — sanctuary where achievement rests",
     },
   },
   legacy: {
-    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80",
-    alt: "Enduring architectural craftsmanship",
+    src: u("1487958449943-2429e8be8625", 2000),
+    alt: "Enduring architectural craftsmanship — Nagrik legacy",
   },
   closing: {
-    src: "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=2200&q=80",
-    alt: "Twilight view of a landmark skyline",
+    src: operaHero,
+    alt: "Opera at twilight — experience your future address",
   },
+  amenities: [
+    {
+      src: u("1571902943202-507ec2618e8f", 1400),
+      alt: "Wellness pool — world-class restoration",
+      caption: "Wellness",
+    },
+    {
+      src: u("1600210491369-e753d80a41f3", 1400),
+      alt: "Sky lounge — every evening above the city",
+      caption: "Sky Lounge",
+    },
+    {
+      src: u("1414235077428-338989a2e8c0", 1400),
+      alt: "Private dining — host without leaving home",
+      caption: "Private Dining",
+    },
+    {
+      src: u("1600585154340-be6161a56a0c", 1400),
+      alt: "Landscape courts — green, pool, and open air",
+      caption: "Landscape Courts",
+    },
+    {
+      src: u("1576013551627-0cc20b96c2a7", 1400),
+      alt: "Infinity pool deck — water, light, and horizon",
+      caption: "Pool Deck",
+    },
+    {
+      src: u("1497366216548-37526070297c", 1400),
+      alt: "Work atelier — clarity in a considered workspace",
+      caption: "Work Atelier",
+    },
+  ],
 } as const;

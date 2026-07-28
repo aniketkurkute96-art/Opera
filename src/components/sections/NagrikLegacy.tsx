@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Timeline } from "@/components/media/Timeline";
-import { legacy } from "@/lib/content";
+import { legacy, legacyIntro } from "@/lib/content";
 import { images } from "@/lib/images";
 
 export function NagrikLegacy() {
@@ -23,14 +23,11 @@ export function NagrikLegacy() {
 
         <div>
           <Reveal>
-            <p className="eyebrow text-champagne/65">Nagrik Legacy</p>
+            <p className="eyebrow text-champagne/65">{legacyIntro.eyebrow}</p>
             <h2 className="mt-6 font-serif display-lg text-ivory text-balance">
-              Built for those who think in decades
+              {legacyIntro.title}
             </h2>
-            <p className="mt-6 lede text-champagne/70">
-              Trust is earned in delivery. Legacy is earned in what remains beautiful after the
-              applause fades.
-            </p>
+            <p className="mt-6 lede text-champagne/70">{legacyIntro.body}</p>
           </Reveal>
           <Reveal delay={1} className="mt-14">
             <Timeline items={[...legacy]} light />

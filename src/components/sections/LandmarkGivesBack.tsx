@@ -138,7 +138,7 @@ function ManifestoCinematic() {
       ref={sectionRef}
       aria-label="Why Opera exists — the philosophy"
       className="relative bg-emerald text-ivory"
-      style={{ height: "720vh" }}
+      style={{ height: "540vh" }}
     >
       <div className="sticky top-0 h-svh overflow-hidden">
         {/* Cinematic backdrops — one philosophy at a time */}
@@ -166,7 +166,7 @@ function ManifestoCinematic() {
         />
         <div className="grain pointer-events-none opacity-[0.05]" aria-hidden />
 
-        {/* Chapter stage — four layers: truth → philosophy → product → close */}
+        {/* Chapter stage — feel → product → difference */}
         <div className="relative z-10 flex h-svh flex-col px-[var(--section-pad-x)] pb-10 pt-[calc(var(--nav-height)+1.25rem)] md:pb-14 lg:pb-[var(--section-pad-y)]">
           <div data-index>
             <p className="eyebrow text-champagne/55">{givesBackManifesto.eyebrow}</p>
@@ -186,22 +186,18 @@ function ManifestoCinematic() {
                 data-copy={item.id}
                 className="absolute inset-x-0 bottom-0 flex flex-col justify-end"
               >
-                {/* 1. Human truth */}
+                {/* 1. Feel */}
                 <p className="font-serif text-[1.65rem] leading-[1.15] text-balance text-ivory md:text-3xl lg:text-[2.35rem]">
-                  {item.truth}
+                  {item.feel}
                 </p>
-                {/* 2. Opera philosophy */}
-                <div className="mt-4 max-w-xl space-y-1.5 text-[0.95rem] leading-relaxed text-champagne/90 md:text-base">
-                  {item.philosophy.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
-                </div>
-                {/* 3. Product translation — evidence right after emotion */}
-                <p className="mt-4 max-w-xl text-sm leading-relaxed text-champagne/68 md:text-[0.95rem]">
+                {/* 2. Product — tangible proof */}
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-champagne/75 md:text-[0.95rem]">
                   {item.product}
                 </p>
-                {/* 4. Closing */}
-                <p className="mt-5 font-serif text-lg text-ivory md:text-xl">{item.close}</p>
+                {/* 3. Difference — why Opera */}
+                <p className="mt-4 max-w-xl font-serif text-base leading-relaxed text-champagne/90 md:text-lg">
+                  {item.difference}
+                </p>
               </article>
             ))}
           </div>
@@ -278,14 +274,11 @@ function ManifestoStatic() {
               <div>
                 <p className="eyebrow text-champagne/55">{givesBackManifesto.eyebrow}</p>
                 <p className="mt-3 font-serif text-5xl">{item.title}</p>
-                <p className="mt-5 font-serif text-2xl text-balance md:text-3xl">{item.truth}</p>
-                <div className="mt-5 space-y-2 leading-relaxed text-champagne/90">
-                  {item.philosophy.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
-                </div>
-                <p className="mt-5 leading-relaxed text-champagne/70">{item.product}</p>
-                <p className="mt-7 font-serif text-xl text-ivory">{item.close}</p>
+                <p className="mt-5 font-serif text-2xl text-balance md:text-3xl">{item.feel}</p>
+                <p className="mt-5 leading-relaxed text-champagne/75">{item.product}</p>
+                <p className="mt-5 font-serif text-lg leading-relaxed text-champagne/90">
+                  {item.difference}
+                </p>
               </div>
             </article>
           ))}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { lifeMoments } from "@/lib/content";
+import { lifeIntro, lifeMoments } from "@/lib/content";
 import { images } from "@/lib/images";
 import { cn } from "@/lib/cn";
 
@@ -13,7 +13,7 @@ export function LifeAtOpera() {
   const moment = lifeMoments.find((m) => m.id === active) ?? lifeMoments[0];
 
   return (
-    <Section id="life" ariaLabel="Life at Opera" className="!px-0 !py-0">
+    <Section id="life" ariaLabel="Everyday life at Opera" className="!px-0 !py-0">
       <div className="relative min-h-svh">
         <div className="absolute inset-0">
           {lifeMoments.map((item) => {
@@ -38,17 +38,20 @@ export function LifeAtOpera() {
 
         <div className="relative z-10 flex min-h-svh flex-col justify-between px-[var(--section-pad-x)] py-24">
           <Reveal>
-            <p className="eyebrow text-champagne/70">Life at Opera</p>
+            <p className="eyebrow text-champagne/70">{lifeIntro.eyebrow}</p>
             <h2 className="mt-6 max-w-xl font-serif display-lg text-ivory text-balance">
-              A day, beautifully paced
+              {lifeIntro.title}
             </h2>
+            <p className="mt-5 max-w-md text-base leading-relaxed text-champagne/75">
+              {lifeIntro.body}
+            </p>
           </Reveal>
 
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-end">
             <Reveal delay={1}>
               <div
                 role="tablist"
-                aria-label="Times of day"
+                aria-label="Rhythm of life"
                 className="flex flex-wrap gap-2 lg:flex-col lg:items-start"
               >
                 {lifeMoments.map((item) => {

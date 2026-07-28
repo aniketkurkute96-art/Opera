@@ -94,7 +94,7 @@ export function Navigation() {
               activeSection === "closing" && "text-forest",
             )}
           >
-            Enquire
+            Experience
           </Link>
         </div>
 
@@ -168,7 +168,7 @@ export function Navigation() {
               onClick={() => setOpen(false)}
               className="btn-primary inline-flex"
             >
-              Private Enquiry
+              Book a Presentation
             </Link>
           </div>
         </nav>
